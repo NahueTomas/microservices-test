@@ -35,6 +35,7 @@ export const PostCreate = () => {
       errorMessage: null
     })
     setTitle("")
+    window.location.reload()
     return null
   }
 

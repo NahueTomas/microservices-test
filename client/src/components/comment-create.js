@@ -35,6 +35,7 @@ export const CommentCreate = ({ postId }) => {
       errorMessage: null
     })
     setContent("")
+    window.location.reload()
     return null
   }
 
