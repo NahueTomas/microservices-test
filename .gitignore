@@ -20,3 +20,7 @@
 
 # client production
 /client/build
+
+# env
+.env
+/*/.env

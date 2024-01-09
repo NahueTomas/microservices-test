@@ -2,6 +2,9 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import axios from 'axios'
 
+dotenv.config()
+const eventBusUrl = process.env.EVENT_BUS_URL
+
 
 const app = express()
 app.use(bodyParser.json())
@@ -11,7 +14,7 @@ app.post('/events', async (req, res) => {
 
   if(event.type === 'CommentCreated') {
     const status = event.data.content.includes('orange') ? 'rejected' : 'approved'
-    await axios.post('http://localhost:4005/events', {
+    await axios.post(`${eventBusUrl}/events`, {
       type: 'CommentModerated',
       data: {
         id: event.data.id,

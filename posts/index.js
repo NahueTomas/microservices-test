@@ -2,6 +2,10 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import axios from 'axios'
+import dotenv from 'dotenv'
+
+dotenv.config()
+const eventBusUrl = process.env.EVENT_BUS_URL
 
 import { randomBytes } from 'crypto'
 
@@ -22,7 +26,7 @@ app.post('/posts', async (req, res) => {
 
   posts[id] = { id, title }
 
-  await axios.post('http://localhost:4005/events', {
+  await axios.post(`${eventBusUrl}/events`, {
     type: 'PostCreated',
     data: posts[id]
   }).catch(e => console.log(e))
