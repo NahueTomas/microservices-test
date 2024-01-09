@@ -12,7 +12,7 @@ There are 4 APIs microservices and 1 event-bus to manage events between them. Al
 
 
 ### .ENV
-If you want to test this project you have to create a .env file and fill following the .env.example file.
+If you want to test this project you have to create a .env file and fill it following the .env.example file.
 
 ### Start
 Every project should start with:
