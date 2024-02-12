@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: nahuetomas/blog-moderation:0.0.1
+          image: nahuetomas/blog-moderation:latest
           env:
             - name: EVENT_BUS_URL
               value: http://event-bus-clusterip-srv:4005

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: comments
-          image: nahuetomas/blog-comments:0.0.1
+          image: nahuetomas/blog-comments:latest
           env:
             - name: EVENT_BUS_URL
               value: http://event-bus-clusterip-srv:4005

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: query
-          image: nahuetomas/blog-query:0.0.1
+          image: nahuetomas/blog-query:latest
           env:
             - name: EVENT_BUS_URL
               value: http://event-bus-clusterip-srv:4005
