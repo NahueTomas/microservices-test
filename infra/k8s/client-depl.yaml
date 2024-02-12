@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: nahuetomas/blog-client:latest
+          image: nahuetomas/blog-client
           env:
           - name: REACT_APP_POSTS_URL
             value: http://posts.com
